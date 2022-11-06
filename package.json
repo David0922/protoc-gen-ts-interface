@@ -1,0 +1,17 @@
+{
+  "name": "protoc-gen-ts-interface",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "build": "./build.sh",
+    "clean": "rm -rf ./dist $(yarn bin)/protoc-gen-ts-interface ./*.pb.*",
+    "start": "protoc --ts-interface_out=. --ts-interface_opt=target=ts ./*.proto"
+  },
+  "bin": "./dist/main.js",
+  "devDependencies": {
+    "npm-check-updates": "^16.3.16"
+  },
+  "dependencies": {
+    "@bufbuild/protoplugin": "^0.2.1"
+  }
+}
